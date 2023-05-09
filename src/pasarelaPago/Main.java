@@ -1,8 +1,9 @@
 package pasarelaPago;
 import java.util.Scanner;
+import java.io.IOException;
 import java.util.ArrayList;
 public class Main {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		int opcion = 0;
 		Scanner sc = new Scanner(System.in);
@@ -13,7 +14,6 @@ public class Main {
 		listaProductos.add(new Producto("producto X", 2.0, 1));
 		
 		menu.bienvenidaPrograma();
-		
 		while(opcion != 4) {
 			menu.opcionesMenuPrincipal();
 			opcion = sc.nextInt();

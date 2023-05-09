@@ -5,28 +5,14 @@ import java.io.Serializable;
 public class Cliente implements Serializable {
 	
 	// Atributos 
-	/**
-	 * Nombre del cliente
-	 */
+	
 	String nombre;
-	
-	/**
-	 * Apellidos del cliente
-	 */
 	String apellidos;
-	
-	/**
-	 * Direccion del cliente
-	 */
 	String direccion;
-	
-	/**
-	 * Telefono del cliente
-	 */
 	String telefono;
 	
 	/**
-	 * Constructor clase 'Cliente'
+	 * Constructor clase Cliente
 	 * @param nombre
 	 * @param apellidos
 	 * @param direccion

@@ -7,7 +7,7 @@ public class Pedido {
 	double importeTotal;
 	ArrayList<Integer> cantidades = new ArrayList<Integer>();
 	ArrayList<Producto> productos = new ArrayList<Producto>();
-	String estado;;
+	String estado;
 	
 	public Pedido(Cliente cliente, String estado) {
 		this.cliente = cliente;

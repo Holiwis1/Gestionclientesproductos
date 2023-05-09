@@ -1,17 +1,22 @@
 package pasarelaPago;
 import java.io.IOException;
-/**
- * @author joaquin
- */
-import java.io.ObjectInputStream;
+ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+/**
+ * 
+ * @author joaquin
+ *
+ */
 public class Fichero {
+	/*
+	 * Funcion en la cual a la hora de agregar clientes tener una ruta (fichero.txt) donde se almacenen.
+	 */
 	public void guardarClienteFichero(ArrayList<Cliente> listaClientes) {	
 			FileOutputStream archivoSalida = null;
-			ObjectOutputStream objetoSalida = null; 
+			ObjectOutputStream objetoSalida = null;
 		
 			try {
 				archivoSalida = new FileOutputStream("C:\\Users\\joaquin\\eclipse-workspace\\pasarelaPago\\src\\pasarelaPago\\clientes.txt");
@@ -23,6 +28,9 @@ public class Fichero {
 				e.printStackTrace();
 			}
 		}
+	/*
+	 * 
+	 */
 	public ArrayList<Cliente> leerClientesFichero() {
 		FileInputStream archivoSalida = null;
 		ObjectInputStream objetoSalida = null;
@@ -45,7 +53,7 @@ public class Fichero {
 		}
 		return listaClientes;
 	}
-	public void guardarProductoFichero(ArrayList<Producto> listaProductos) {	
+	public void guardarProductoFichero(ArrayList<Producto> listaProductos)throws IOException {	
 		FileOutputStream archivoSalida = null;
 		ObjectOutputStream objetoSalida = null; 
 	
@@ -53,16 +61,26 @@ public class Fichero {
 			archivoSalida = new FileOutputStream("C:\\Users\\joaquin\\eclipse-workspace\\pasarelaPago\\src\\pasarelaPago\\productos.txt");
 			objetoSalida = new ObjectOutputStream(archivoSalida);
 			objetoSalida.writeObject(listaProductos);
-			objetoSalida.close();
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+		finally {
+			if (objetoSalida!=null) {
+				objetoSalida.close();
+				archivoSalida.close();
+				
+			}
+			
+			
 		}
 	}
 	public ArrayList<Producto> leerProductosFichero() {
 		FileInputStream archivoSalida = null;
 		ObjectInputStream objetoSalida = null;
 		ArrayList<Producto> listaProductos = null;
+	
 		
 		try {
 			archivoSalida = new FileInputStream("C:\\Users\\joaquin\\eclipse-workspace\\pasarelaPago\\src\\pasarelaPago\\productos.txt");
