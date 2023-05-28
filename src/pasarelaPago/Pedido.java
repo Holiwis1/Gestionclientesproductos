@@ -8,10 +8,12 @@ public class Pedido {
 	ArrayList<Integer> cantidades = new ArrayList<Integer>();
 	ArrayList<Producto> productos = new ArrayList<Producto>();
 	String estado;
+	BasedeDatos BD;
 	
-	public Pedido(Cliente cliente, String estado) {
+	public Pedido(Cliente cliente, String estado,BasedeDatos BD) {
 		this.cliente = cliente;
 		this.estado = estado;
+		this.BD=BD;
 	}
 	
 	public void mostrarPedido() {
@@ -23,6 +25,9 @@ public class Pedido {
 			int cantidad = this.cantidades.get(i);
 			String producto = this.productos.get(i).nombre;
 			System.out.println("   "+cantidad+"    "+producto+"     "+this.productos.get(i).precio + "$");
+			if (cliente != null && estado.equals("finalizado")) {
+	            BD.guardarPedidoBaseDatos(this);
+		}
 		}
 		System.out.println("Total: "+this.importeTotal+" $");
 	}

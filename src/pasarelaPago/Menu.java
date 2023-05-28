@@ -6,7 +6,11 @@ import java.util.regex.Pattern;
 import java.util.ArrayList;
 
 public class Menu {
+	
+	
 	public Menu() {}
+	
+	
 	public void mostrarProductos(ArrayList<Producto> productos) {
 		System.out.println("");
 		System.out.println("- PRODUCTOS -");
@@ -15,6 +19,7 @@ public class Menu {
 		}
 		System.out.println("");
 	}
+	
 	public String telefonoValidar() {
 		Scanner sc = new Scanner(System.in);
 		String telefono = "";

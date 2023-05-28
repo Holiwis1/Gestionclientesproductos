@@ -1,19 +1,33 @@
 package pasarelaPago;
+
 import java.util.Scanner;
 import java.io.IOException;
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+
 public class Main {
-	public static void main(String[] args) throws IOException {
+
+public static void main(String[] args)  {
+		/*para que tener problemas con ������������*/
+		try {
+            System.setOut(new PrintStream(System.out, true, "UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
 		
 		int opcion = 0;
 		Scanner sc = new Scanner(System.in);
 		Menu menu = new Menu();
 		Fichero fc = new Fichero();
-		ArrayList<Cliente> listaClientes = fc.leerClientesFichero();
-		ArrayList<Producto> listaProductos = fc.leerProductosFichero();
-		listaProductos.add(new Producto("producto X", 2.0, 1));
+		BasedeDatos BD= new BasedeDatos();
+		ArrayList<Cliente> listaClientes = BD.leerClientesBaseDatos();
+		ArrayList<Producto> listaProductos = BD.leerProductosBaseDatos();
+		
+		
 		
 		menu.bienvenidaPrograma();
+		
 		while(opcion != 4) {
 			menu.opcionesMenuPrincipal();
 			opcion = sc.nextInt();
@@ -22,13 +36,14 @@ public class Main {
 			case 1:
 				Cliente cliente = menu.crearCliente();
 				listaClientes.add(cliente);
-				fc.guardarClienteFichero(listaClientes);
+				BD.guardarClienteBaseDatos(listaClientes);
 				
 				break;
 			case 2:
 				Producto producto = menu.crearProducto();
 				listaProductos.add(producto);
-				fc.guardarProductoFichero(listaProductos);
+				BD.guardarProductoBaseDatos(listaProductos);
+				
 				break;
 			case 3:
 				System.out.println("Numero de telefono del cliente: ");
@@ -44,7 +59,8 @@ public class Main {
 				} else {
 					String p;
 					System.out.println("Cliente: "+clienteSeleccionado.nombre);
-					Pedido pedido = new Pedido(clienteSeleccionado, "en curso");
+					Pedido pedido = new Pedido(clienteSeleccionado, "en curso",BD);
+				
 					while(pedido.estado.equals("en curso")) {
 						menu.mostrarProductos(listaProductos);
 						pedido.mostrarPedido();
@@ -71,6 +87,7 @@ public class Main {
 							if(listaProductos.get(Integer.parseInt(p)).cantidad - cantidad >= 0) {
 								pedido.agregarProducto(listaProductos.get(Integer.parseInt(p)), cantidad);
 								listaProductos.get(Integer.parseInt(p)).reducirStock(cantidad);
+								
 							} else {
 								System.out.println("No hay suficientes productos en stock");
 							}
@@ -80,6 +97,7 @@ public class Main {
 						
 					}
 				}
+				
 				break;
 			case 4:
 				System.out.println("Cerrando programa.");
@@ -91,5 +109,4 @@ public class Main {
 		}
 		
 	}
-
 }
