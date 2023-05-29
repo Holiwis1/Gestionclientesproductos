@@ -6,4 +6,5 @@
  *
  */
 module pasarelaPago {
+	requires java.sql;
 }
