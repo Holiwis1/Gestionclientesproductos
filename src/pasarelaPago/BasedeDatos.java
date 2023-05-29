@@ -21,7 +21,7 @@ public class BasedeDatos {
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(
-					"C:\\\\Users\\\\joaquin\\\\eclipse-workspace\\\\pasarelaPago\\\\src\\\\pasarelaPago\\\\configuracion.txt"));
+					"C:\\Users\\joaquin\\Documents\\GitHub\\Gestionclientesproductos\\src\\pasarelaPago\\configuracion.txt"));
 			return br.readLine();
 		} finally {
 			if (br != null) {
@@ -41,7 +41,7 @@ public class BasedeDatos {
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(
-					"C:\\\\Users\\\\joaquin\\\\eclipse-workspace\\\\pasarelaPago\\\\src\\\\pasarelaPago\\\\configuracion.txt"));
+					"C:\\Users\\joaquin\\Documents\\GitHub\\Gestionclientesproductos\\src\\pasarelaPago\\configuracion.txt"));
 			br.readLine();
 			return br.readLine();
 		} finally {
@@ -62,7 +62,7 @@ public class BasedeDatos {
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(
-					"C:\\\\Users\\\\joaquin\\\\eclipse-workspace\\\\pasarelaPago\\\\src\\\\pasarelaPago\\\\configuracion.txt"));
+					"C:\\Users\\joaquin\\Documents\\GitHub\\Gestionclientesproductos\\src\\pasarelaPago\\configuracion.txt"));
 			br.readLine();
 			br.readLine();
 			return br.readLine();
