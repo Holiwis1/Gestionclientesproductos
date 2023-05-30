@@ -1,5 +1,4 @@
 
-
 package pasarelaPago;
 
 import java.io.Serializable;
@@ -10,32 +9,32 @@ import java.io.Serializable;
  *
  */
 public class Producto implements Serializable {
-	
-	//Atributos
-	
+
+	// Atributos
+
 	/**
 	 * Nombre del producto
 	 */
 	String nombre;
-	
+
 	/**
 	 * Precio del producto
 	 */
 	double precio;
-	
+
 	/**
 	 * Cantidad de productos de este tipo
 	 */
 	int cantidad;
-	
 
 	/**
 	 * Cosntructor clase producto
+	 * 
 	 * @param nombre
 	 * @param precio
 	 * @param cantidad
 	 */
-	public Producto(String nombre,double precio,int cantidad) {
+	public Producto(String nombre, double precio, int cantidad) {
 		setNombre(nombre);
 		setPrecio(precio);
 		setCantidad(cantidad);
@@ -65,10 +64,11 @@ public class Producto implements Serializable {
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
+
 	public void reducirStock(int cantidad) {
 		this.cantidad = this.cantidad - cantidad;
 	}
-	
+
 	public void mostrarProducto() {
 		System.out.println(this.nombre + " " + this.precio + " " + this.cantidad);
 	}

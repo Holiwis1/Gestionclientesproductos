@@ -13,7 +13,8 @@ import java.util.ArrayList;
 public class BasedeDatos {
 	/**
 	 * Obtiene la URL de conexión desde un archivo de configuracion.
-	 *
+	 * 
+	 * @author joaquin
 	 * @return URL
 	 * @throws
 	 */
@@ -214,6 +215,12 @@ public class BasedeDatos {
 		return listaClientes;
 	}
 
+	/**
+	 * Lee los productos de la base de datos y los devuelve como una lista de
+	 * objetos Producto.
+	 *
+	 * @return Lista de productos leídos de la base de datos.
+	 */
 	public ArrayList<Producto> leerProductosBaseDatos() {
 		ArrayList<Producto> listaProductos = new ArrayList<>();
 		Connection connection = null;
@@ -282,6 +289,11 @@ public class BasedeDatos {
 		return listaProductos;
 	}
 
+	/**
+	 * Guarda una lista de productos en la base de datos.
+	 *
+	 * @param listaProductos
+	 */
 	public void guardarProductoBaseDatos(ArrayList<Producto> listaProductos) {
 		Connection connection = null;
 		PreparedStatement statement = null;
@@ -342,6 +354,12 @@ public class BasedeDatos {
 		}
 
 	}
+
+	/**
+	 * Guarda el pedido en la base de datos.
+	 *
+	 * @param pedido El pedido a guardar en la base de datos.
+	 */
 
 	public void guardarPedidoBaseDatos(Pedido pedido) {
 		Connection connection = null;
