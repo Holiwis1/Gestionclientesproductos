@@ -383,7 +383,7 @@ public class BasedeDatos {
 			// Obtener el ID del cliente
 
 			// Consulta SQL para insertar el pedido en la base de datos
-			String sql = "INSERT INTO pedido (id_producto, nombre_producto, precio, cantidad, total) VALUES (?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO pedido ( nombre_producto, precio, cantidad, total) VALUES (?, ?, ?, ?)";
 			statement = connection.prepareStatement(sql);
 
 			for (int i = 0; i < pedido.productos.size(); i++) {
@@ -391,10 +391,10 @@ public class BasedeDatos {
 				int cantidadProducto = pedido.cantidades.get(i);
 				double totalProducto = producto.precio * cantidadProducto;
 
-				statement.setString(2, producto.nombre);
-				statement.setDouble(3, producto.precio);
-				statement.setInt(4, cantidadProducto);
-				statement.setDouble(5, totalProducto);
+				statement.setString(1, producto.nombre);
+				statement.setDouble(2, producto.precio);
+				statement.setInt(3, cantidadProducto);
+				statement.setDouble(4, totalProducto);
 
 				// Ejecutar la consulta SQL para cada producto del pedido
 				int filasInsertadas = statement.executeUpdate();

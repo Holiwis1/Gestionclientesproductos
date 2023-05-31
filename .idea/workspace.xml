@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="236a0744-c2eb-47d6-b7dc-4f09143a6d62" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/BasedeDatos.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/Cliente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/Fichero.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/Pedido.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/Producto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/SistemaPago.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/clientes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/configuracion.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/pasarelaPago/productos.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2QZ1iXIcRFq9SNusB3CVoXlWkiY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/joaquin/Documents/GitHub/Gestionclientesproductos"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="236a0744-c2eb-47d6-b7dc-4f09143a6d62" name="Changes" comment="" />
+      <created>1685546416522</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685546416522</updated>
+    </task>
+    <servers />
+  </component>
+</project>

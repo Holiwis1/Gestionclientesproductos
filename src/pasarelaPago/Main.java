@@ -64,6 +64,7 @@ public static void main(String[] args)  {
 					while(pedido.estado.equals("en curso")) {
 						menu.mostrarProductos(listaProductos);
 						pedido.mostrarPedido();
+						 BD.guardarPedidoBaseDatos(pedido);
 						System.out.println("Seleccione un producto: ");
 						p = sc.nextLine();
 						
