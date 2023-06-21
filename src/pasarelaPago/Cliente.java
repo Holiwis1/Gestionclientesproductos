@@ -4,11 +4,28 @@ import java.io.Serializable;
 
 public class Cliente implements Serializable {
 
-	// Atributos
-
+	
+	/**
+     * Nombre de la persona.
+     * @var nombre
+     */
 	String nombre;
+	/**
+	 *@var apellidos
+     * Apellidos de la persona.
+     */
 	String apellidos;
+	
+	/**
+	 * @var direccion
+     * Dirección de la persona.
+     */
 	String direccion;
+	
+	/**
+	 * @var telefono
+     * Número de teléfono de la persona.
+     */
 	String telefono;
 
 	/**

@@ -10,6 +10,8 @@ public class Main {
 
 public static void main(String[] args)  {
 		/*para que tener problemas con ������������*/
+	
+		/*generar mejor javadoc*/
 		try {
             System.setOut(new PrintStream(System.out, true, "UTF-8"));
         } catch (UnsupportedEncodingException e) {

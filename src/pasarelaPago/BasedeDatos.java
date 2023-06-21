@@ -9,6 +9,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.sql.*;
+
 
 public class BasedeDatos {
 	/**
@@ -18,6 +20,7 @@ public class BasedeDatos {
 	 * @return URL
 	 * @throws
 	 */
+	
 	private String obtenerURLConexion() throws IOException {
 		BufferedReader br = null;
 		try {
@@ -53,13 +56,13 @@ public class BasedeDatos {
 	}
 
 	/**
-	 * Obtiene la contraseña desde un archivo de configuracion.
+	 * Obtiene la contrasenia desde un archivo de configuracion.
 	 *
-	 * @return contraseña.
-	 * @throws
+	 * 
+	 * 
 	 */
 
-	private String obtenerContraseña() throws IOException {
+	private String obtenerContrasenia() throws IOException {
 		BufferedReader br = null;
 		try {
 			br = new BufferedReader(new FileReader(
@@ -91,8 +94,8 @@ public class BasedeDatos {
 			// Establecer la conexion con la base de datos
 			String url = obtenerURLConexion();
 			String usuario = obtenerUsuario();
-			String contraseña = obtenerContraseña();
-			connection = DriverManager.getConnection(url, usuario, contraseña);
+			String contrasenia = obtenerContrasenia();
+			connection = DriverManager.getConnection(url, usuario, contrasenia);
 
 			// Verificar que la conexion se haya establecido correctamente
 			if (connection != null) {
@@ -160,8 +163,8 @@ public class BasedeDatos {
 			// Establecer la conexión con la base de datos
 			String url = obtenerURLConexion();
 			String usuario = obtenerUsuario();
-			String contraseña = obtenerContraseña();
-			connection = DriverManager.getConnection(url, usuario, contraseña);
+			String contrasenia = obtenerContrasenia();
+			connection = DriverManager.getConnection(url, usuario, contrasenia);
 
 			// Verificar que la conexión se haya establecido correctamente
 			if (connection != null) {
@@ -234,8 +237,8 @@ public class BasedeDatos {
 			// Establecer la conexion con la base de datos
 			String url = obtenerURLConexion();
 			String usuario = obtenerUsuario();
-			String contraseña = obtenerContraseña();
-			connection = DriverManager.getConnection(url, usuario, contraseña);
+			String contrasenia = obtenerContrasenia();
+			connection = DriverManager.getConnection(url, usuario, contrasenia);
 
 			// Verificar que la conexion se haya establecido correctamente
 			if (connection != null) {
@@ -305,8 +308,8 @@ public class BasedeDatos {
 			// Establecer la conexion con la base de datos
 			String url = obtenerURLConexion();
 			String usuario = obtenerUsuario();
-			String contraseña = obtenerContraseña();
-			connection = DriverManager.getConnection(url, usuario, contraseña);
+			String contrasenia = obtenerContrasenia();
+			connection = DriverManager.getConnection(url, usuario, contrasenia);
 
 			// Verificar que la conexión se haya establecido correctamente
 			if (connection != null) {
@@ -369,8 +372,8 @@ public class BasedeDatos {
 			// Establecer la conexión con la base de datos
 			String url = obtenerURLConexion();
 			String usuario = obtenerUsuario();
-			String contraseña = obtenerContraseña();
-			connection = DriverManager.getConnection(url, usuario, contraseña);
+			String contrasenia = obtenerContrasenia();
+			connection = DriverManager.getConnection(url, usuario, contrasenia);
 
 			// Verificar que la conexión se haya establecido correctamente
 			if (connection != null) {

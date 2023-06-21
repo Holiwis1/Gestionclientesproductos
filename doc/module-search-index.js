@@ -1,1 +1,1 @@
-moduleSearchIndex = [{"l":"pasarelaPago"}];updateSearchResults();
+moduleSearchIndex = [];updateSearchResults();
